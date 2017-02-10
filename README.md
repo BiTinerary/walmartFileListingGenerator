@@ -2,7 +2,7 @@
 Generate rows, which corespond to individual listing properties, to copy/paste in walmart spreadsheet for bulk listing.
 Similar to eBay's 'File Exchange.'
 
-<img src='https://s24.postimg.org/51u6cis6t/wallywally.png'>
+<center><img src='https://s24.postimg.org/51u6cis6t/wallywally.png'></center>
 
 ##Overall
 WalMart marketplace's listing process is lack luster. Also, their API is mostly still in beta. Current process is to manually update a (really bad) ~200 cell `xlsx` spreadsheet per listing.<br>Granted you don't <b>need</b> to use all cells but each cell does correspond to something in the listing.<br>
