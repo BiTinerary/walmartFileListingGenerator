@@ -1,5 +1,5 @@
 # walmartFileListingGenerator
-Generate rows, which corespond to individual listing properties, to copy/paste in walmart spreadsheet for bulk listing.
+Generate rows, which correspond to individual listing properties, to copy/paste into walmart spreadsheet for bulk listing.
 Similar to eBay's 'File Exchange.'
 
 ##Overall
