@@ -25,11 +25,11 @@ Furthermore, there are hidden rows, excessive sheets (unused categories, cell de
 <br>
 Given the fact that reading `xlsx` spreadsheets and then editing them on the fly is overly complicated and more than what I need. I simply log the array and then copy a stripped version of the array into the clip board which can then be pasted with 'special format' to a (crappy walmart) spreadsheet. 
 
-##Library Requirements
-`pip install pyperclip`
-`pip install python-tk`
+##Library Requirements<br>
+`pip install pyperclip`<br>
+`pip install python-tk`<br>
 
 ##TODO
-*<strike>Extensible to more than just the home decor listing category. At the moment this category is all that applies to me personally.</strike>
-*<strike>Add tkinter GUI</strike>
+*<strike>Extensible to more than just the home decor listing category. At the moment this category is all that applies to me personally.</strike><br>
+*<strike>Add tkinter GUI</strike><br>
 *Make final/output string a log file. <b>It is overwritten</b> every time a new listing is filled out, or when <kbd>Enter</kbd> is pressed.
