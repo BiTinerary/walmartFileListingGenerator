@@ -1,5 +1,5 @@
 # walmartFileListingGenerator
-Generate rows, which correspond to individual listing properties, to copy/paste into walmart spreadsheet for bulk listing.
+Generate rows, which correspond to individual listing properties, to copy/paste into walmart spreadsheet for bulk listing.<br>
 The `guiGenerator.py` script uses metaprogramming to generate `generatedGUI.py` with variables based on category requirements. This GUI then produces a string to be 'special pasted' into a spreadsheet which can be uploaded in a similar fashion to eBay's 'File Exchange.'
 
 ##Overall
