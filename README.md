@@ -3,7 +3,7 @@ Generate rows, which corespond to individual listing properties, to copy/paste i
 Similar to eBay's 'File Exchange.'
 
 ##Overall
-`tkinterGUIGenerator.py` uses a manually created template (from different Walmart Category spreadsheet) to generate a GUI.py script<br>
+`tkinterGUIGenerator.py` uses a manually created template (from different Walmart Category spreadsheet) to generate a GUI.py script
 with labels and entry options for each cell with content. ie: not empty, static variables like USD, Mesaurements, etc...<br>
 Yes it's ugly. Yes it's metaprogramming.<br>
 <br>
