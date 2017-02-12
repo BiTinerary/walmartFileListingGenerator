@@ -1,6 +1,6 @@
 # walmartFileListingGenerator
 Generate rows, which correspond to individual listing properties, to copy/paste into walmart spreadsheet for bulk listing.
-Similar to eBay's 'File Exchange.'
+Specifically, the main script uses metaprogramming to generates a GUI based on category requirements. This GUI then produces a spreadsheet which can be uploaded similar to eBay's 'File Exchange.'
 
 ##Overall
 `tkinterGUIGenerator.py` uses a manually created template (from different Walmart Category spreadsheet) to generate a GUI.py script
