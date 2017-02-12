@@ -4,16 +4,16 @@ Similar to eBay's 'File Exchange.'
 
 ##Overall
 `tkinterGUIGenerator.py` uses a manually created template (from different Walmart Category spreadsheet) to generate a GUI.py script<br>
-with labels and entry options for each cell with content. ie: not empty, static variables like USD, Mesaurements, etc...
-Yes it's ugly. Yes it's metaprogramming.
-
+with labels and entry options for each cell with content. ie: not empty, static variables like USD, Mesaurements, etc...<br>
+Yes it's ugly. Yes it's metaprogramming.<br>
+<br>
 Which looks like this: `generatedGUI.py`<br>
-<img src='https://s21.postimg.org/wgnjj6wp3/gitpic.png'>
-
-When you press <kbd>Enter</kbd> or the top button, it copies the following into your keyboard and writes to log file:
+<img src='https://s21.postimg.org/wgnjj6wp3/gitpic.png'><br>
+<br>
+When you press <kbd>Enter</kbd> or the top button, it copies the following into your keyboard and writes to log file:<br>
 <br>
 `,kljh,klj,hljk,hlk,jh,lkjh,lkj,h,lkjh,lkj,h,lkj,hljk,h,,UPC,lkj,,,,,USD,hl,,,,,,,,INCHES,jkh,INCHES,lkj,INCHES,hl,POUNDS,jk,2038346,,,,,,,,,,,,,,,,,,,hlk,,,,jh,,,,,,,,,lkj,,,,USD,hlkj,USD,h,,kljh,LB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lkj,,,,,,,,,,,,,,,,,,,,h89769879876,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`
-
+<br>
 You would then paste this into a spreadsheet (with 'special paste' option where applicable) and in turn have one more listing.
 
 ##More info, reasoning, limitations
