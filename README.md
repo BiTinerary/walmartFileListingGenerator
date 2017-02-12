@@ -2,9 +2,21 @@
 Generate rows, which corespond to individual listing properties, to copy/paste in walmart spreadsheet for bulk listing.
 Similar to eBay's 'File Exchange.'
 
-<center><img src='https://s24.postimg.org/51u6cis6t/wallywally.png'></center>
-
 ##Overall
+`tkinterGUIGenerator.py` uses a manually created template (from different Walmart Category spreadsheet) to generate a GUI.py script<br>
+with labels and entry options for each cell with content. ie: not empty, static variables like USD, Mesaurements, etc...
+Yes it's ugly. Yes it's metaprogramming.
+
+Which looks like this: `generatedGUI.py`<br>
+<img src='https://s21.postimg.org/wgnjj6wp3/gitpic.png'>
+
+When you press <kbd>Enter</kbd> or the top button, it copies the following into your keyboard and writes to log file:
+<br>
+`,kljh,klj,hljk,hlk,jh,lkjh,lkj,h,lkjh,lkj,h,lkj,hljk,h,,UPC,lkj,,,,,USD,hl,,,,,,,,INCHES,jkh,INCHES,lkj,INCHES,hl,POUNDS,jk,2038346,,,,,,,,,,,,,,,,,,,hlk,,,,jh,,,,,,,,,lkj,,,,USD,hlkj,USD,h,,kljh,LB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lkj,,,,,,,,,,,,,,,,,,,,h89769879876,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`
+
+You would then paste this into a spreadsheet (with 'special paste' option where applicable) and in turn have one more listing.
+
+##More info, reasoning, limitations
 WalMart marketplace's listing process is lack luster. Also, their API is mostly still in beta. Current process is to manually update a (really bad) ~200 cell `xlsx` spreadsheet per listing.<br>Granted you don't <b>need</b> to use all cells but each cell does correspond to something in the listing.<br>
 <br>
 Of which you have to discern what to keep and what goes where. After filtering out this selection, there's still the process of manually adding or copy/pasting the specifications per product and then going back and changing listing name, UPC's, etc...
@@ -16,8 +28,9 @@ Given the fact that reading `xlsx` spreadsheets and then editing them on the fly
 
 ##Library Requirements
 `pip install pyperclip`
+`pip install python-tk`
 
 ##TODO
-*Extensible to more than just the home decor listing category. At the moment this category is all that applies to me personally.
-*Add tkinter GUI
-*
+*<strike>Extensible to more than just the home decor listing category. At the moment this category is all that applies to me personally.</strike>
+*<strike>Add tkinter GUI</strike>
+*Make final/output string a log file. <b>It is overwritten</b> every time a new listing is filled out, or when <kbd>Enter</kbd> is pressed.
