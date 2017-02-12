@@ -11,7 +11,7 @@ Which looks like this: `generatedGUI.py`<br>
 <br>
 When you press <kbd>Enter</kbd> or the top button, it copies the following into your keyboard and writes to log file:<br>
 <br>
-`,kljh,klj,hljk,hlk,jh,lkjh,lkj,h,lkjh,lkj,h,lkj,hljk,h,,UPC,lkj,,,,,USD,hl,,,,,,,,INCHES,jkh,INCHES,lkj,INCHES,hl,POUNDS,jk,2038346,,,,,,,,,,,,,,,,,,,hlk,,,,jh,,,,,,,,,lkj,,,,USD,hlkj,USD,h,,kljh,LB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lkj,,,,,,,,,,,,,,,,,,,,h89769879876,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`
+`,kljh,klj,hljk,hlk,jh,lkjh,lkj,h,lkjh,lkj,h,lkj,hljk,h,,UPC,lkj,,,,,USD,hl,,,,,,,,INCHES,jkh,INCHES,lkj,INCHES,hl,POUNDS,jk,2038346,,,,,,,,,,,,,,,,,,,hlk,,,,jh,,,,,,,,,lkj,,,,USD,hlkj,USD,h,,kljh,LB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lkj,,,,,,,,,,,,,,,,,,,,h89769879876,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`<br>
 <br>
 You would then paste this into a spreadsheet (with 'special paste' option where applicable) and in turn have one more listing.
 
