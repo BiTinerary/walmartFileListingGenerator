@@ -51,7 +51,7 @@ class mainApp(tk.Tk): # The core class for creating tkinter GUI
 			thisToClipAndXLSX = ','.join(finalArray)
 			pyperclip.copy('\\n'+thisToClipAndXLSX+'\\n')
 			print 'copied to clipboard'
-			print thisToClipAndXLSX
+			print thisToClipAndXLSX.encode('utf-8')
 
 		self.bind('<Return>', (lambda event: getInput()))
 
@@ -101,7 +101,7 @@ with open('generatedGUI.py', 'r') as replaceArray:
 			readRawArray = rawArray.read()
 			replacement = reading.replace('%REPLACEMEARRAY%', readRawArray.replace("'", ""))
 
-with open('generatedGUI.py', 'r+') as newfile:
+with open('generatedGUI.py', 'w+') as newfile:
 	newfile.write(str(replacement))
 createEnder()
 

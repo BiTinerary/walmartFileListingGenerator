@@ -44,7 +44,7 @@ class mainApp(tk.Tk): # The core class for creating tkinter GUI
 			thisToClipAndXLSX = ','.join(finalArray)
 			pyperclip.copy('\n'+thisToClipAndXLSX+'\n')
 			print 'copied to clipboard'
-			print thisToClipAndXLSX
+			print thisToClipAndXLSX.encode('utf-8')
 
 		self.bind('<Return>', (lambda event: getInput()))
 
