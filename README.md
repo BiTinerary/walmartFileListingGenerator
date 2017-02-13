@@ -33,3 +33,7 @@ Given the fact that reading `xlsx` spreadsheets and then editing them on the fly
 *<strike>Extensible to more than just the home decor listing category. At the moment this category is all that applies to me personally.</strike><br>
 *<strike>Add tkinter GUI</strike><br>
 *<strike>Make final/output string a log file. <b>It is overwritten</b> every time a new listing is filled out, or when <kbd>Enter</kbd> is pressed.</strike>
+* Sanitize input, comma's are currently an issue. Obviously mess up list format. (urls? not an issue as of yet.)
+* Sanitize number inputs, UPC, MSRP, $$, etc...
+* Add 'upload file' option.
+  *Instead of manual input per listing, accept input file (2d array) of copy/pasted log file that are marginally different (ie: sizes color) but allow for easy editing of certain cells (html, <li></li>, Description) and copy/pasting those to another array.
