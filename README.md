@@ -32,4 +32,4 @@ Given the fact that reading `xlsx` spreadsheets and then editing them on the fly
 ##TODO
 *<strike>Extensible to more than just the home decor listing category. At the moment this category is all that applies to me personally.</strike><br>
 *<strike>Add tkinter GUI</strike><br>
-*Make final/output string a log file. <b>It is overwritten</b> every time a new listing is filled out, or when <kbd>Enter</kbd> is pressed.
+*<strike>Make final/output string a log file. <b>It is overwritten</b> every time a new listing is filled out, or when <kbd>Enter</kbd> is pressed.</strike>
