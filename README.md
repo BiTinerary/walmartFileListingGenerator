@@ -36,4 +36,4 @@ Given the fact that reading `xlsx` spreadsheets and then editing them on the fly
 * Sanitize input, comma's are currently an issue. Obviously mess up list format. (urls? not an issue as of yet.)
 * Sanitize number inputs, UPC, MSRP, $$, etc...
 * Add 'upload file' option.
- *Instead of manual input per listing, accept input file (2d array) of copy/pasted log file that are marginally different (ie: sizes color) but allow for easy editing of certain cells (html, `<li></li>`, Description) and copy/pasting those to another array.
+    *Instead of manual input per listing, accept input file (2d array) of copy/pasted log file that are marginally different (ie: sizes color) but allow for easy editing of certain cells (html, `<li></li>`, Description) and copy/pasting those to another array.
