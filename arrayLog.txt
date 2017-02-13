@@ -1,0 +1,1 @@
+['entry1.get()', 'entry2.get()', 'entry3.get()', 'entry4.get()', 'entry5.get()', 'entry6.get()', 'entry7.get()', 'entry8.get()', 'entry9.get()', 'entry10.get()', 'entry11.get()', 'entry12.get()', 'entry13.get()', 'entry14.get()', 'entry15.get()', 'entry16.get()', 'entry17.get()', 'entry18.get()', 'entry19.get()']

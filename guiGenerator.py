@@ -1,4 +1,4 @@
-walmartArrayForCategory = ['ATTRIBUTE', 'LISTINGTITLE', 'LONGDESCRIPTION', 'SHELFDESCRIPTION', 'LANTERNREFURB', 'IMAGEURL','MAINIMAGEALTERNATE', 'ASSETALTTEXT', 'ASSETURL', 'ASSETTYPE', 'ADDITIONALASSETALT', 'ADDITIONALASSETURL','ADDITIONALASSETTYPE', 'ADDITIONALASSETALTTEST', 'ADDITIONALURLASSETTHREE', '', 'UPC', 'UPCNUMBER', '', '','', '', 'USD', 'MSRPMEASURE', '', '', '', '', '', '', '', 'INCHES', 'LENGTH', 'INCHES', 'WIDTH', 'INCHES','HEIGHT', 'POUNDS', 'WEIGHT', '2038346', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', 'WARRANTYTEXT', '', '', '', 'WARRANTYLENGTH', '', '', '', '', '', '', '', '', 'CUSTOMSKU', '', '', '','USD', 'SELLFORAMOUNT', 'USD', 'MINSELLFOR', '', 'SHIPWEIGHTVALUE', 'LB', '', '', '', '', '', '', '', '','', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', '', '', '', '', 'CATEGORYSPECIFICATTRIBUTES', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', '', '', '', 'BRANDNAME', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+walmartArrayForCategory = ['', 'Listing Title', 'Long Description', 'Shelf Description', 'Short Description', 'Image URL','Main Image Alternate Text', '', '', '', '', '','', '', '', '', 'UPC', 'UPC Number', '', '','', '', 'USD', 'MSRP', '', '', '', '', '', '', '', 'INCHES', 'Length', 'INCHES', 'Width', 'INCHES','Height', 'POUNDS', 'Weight', '2038346', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', 'Warranty Text', '', '', '', 'Waranty Length', '', '', '', '', '', '', '', '', 'Custom SKU', '', '', '','USD', 'Sell For Amount', 'USD', 'Min Advertised Price', '', 'Shipping Weight (lbs)', 'LB', '', '', '', '', '', '', '', '','', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', '', '', '', 'Brand Name', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '','', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 
 getInputArray = []
 number = 1
@@ -33,24 +33,21 @@ class mainApp(tk.Tk): # The core class for creating tkinter GUI
 
 			for each in convertToArray:
 				if each == 'UPC' or each == 'USD' or each == 'INCHES' or each == 'POUNDS' or each == '2038346' or each =='LB':
-					with open('finalFile.txt', 'w+') as final:
 						finalArray.append(each)
-						final.write(str(finalArray))
-					continue
-					
-				elif each == '':
-					with open('finalFile.txt', 'w+') as final:
-						finalArray.append(each)
-						final.write(str(finalArray))
 						continue
-
+				elif each == '':
+						finalArray.append(each)
+						continue
 				else:
 					try:
-						with open('finalFile.txt', 'w+') as final:
-							finalArray.append(inputArray[x])
+						finalArray.append(inputArray[x])
 					except:
 						pass
 				x += 1
+			
+			with open('finalFile.txt', 'a+') as final2:
+				final2.write(str(finalArray)+'\\r\\n')
+
 			thisToClipAndXLSX = ','.join(finalArray)
 			pyperclip.copy('\\n'+thisToClipAndXLSX+'\\n')
 			print 'copied to clipboard'
