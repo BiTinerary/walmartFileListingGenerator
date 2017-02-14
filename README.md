@@ -37,3 +37,5 @@ Given the fact that reading `xlsx` spreadsheets and then editing them on the fly
 * Sanitize number inputs, UPC, MSRP, $$, etc...
 * Add 'upload file' option.
     * Instead of manual input per listing, accept input file (2d array) of copy/pasted log file that are marginally different (ie: sizes color) but allow for easy editing of certain cells (html, `<li></li>`, Description) and copy/pasting those to another array.
+* Include/preserve WPID option for accelerated ingestion.
+   * If WPID is included (gathered from previously established listing) then item has existed and has already been approved. So listing doesn't go through same sifting process.
