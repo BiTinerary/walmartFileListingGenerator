@@ -4,11 +4,9 @@ getInputArray = []
 number = 1
 
 def createHeader():
-	with open('generated.py', 'w+') as header:
+	with open('generatedGUI.py', 'w+') as header:
 		header.write("""import Tkinter as tk
-from tkinter.scrolledtext import ScrolledText
-from tkinter import END
-import pyperclip, re
+import pyperclip
 
 def center(toplevel): # Function for centering all windows upon execution.
     toplevel.update_idletasks()
@@ -57,23 +55,23 @@ class mainApp(tk.Tk): # The core class for creating tkinter GUI
 
 		self.bind('<Return>', (lambda event: getInput()))
 
-		getAllInputs0 = tk.Button(text='Gather Inputs', width=95, height=2, command=lambda: getInput())
+		getAllInputs0 = tk.Button(text='Gather Inputs', width=65, command=lambda: getInput())
 		getAllInputs0.grid(row=0, column=0, padx=5, pady=5, columnspan=2)
 """)
 		header.close()
 
 def createBody():
-	with open('generated.py', 'a+') as body:
+	with open('generatedGUI.py', 'a+') as body:
 		body.write("""
 		label%s = tk.Label(width=25, anchor='w', relief='ridge', text="%s")
 		label%s.grid(row=%s, column=0, padx=5, pady=1)
-		entry%s = tk.Entry(self, width=80)
+		entry%s = tk.Entry(width=50, height)
 		entry%s.grid(row=%s, column=1, padx=5, pady=1)
 """ % (number, everyOption, number, number, number, number, number))
 		body.close()
 
 def createEnder():
-	with open('generated.py', 'a+') as ender:
+	with open('generatedGUI.py', 'a+') as ender:
 		ender.write("""
 if __name__ == "__main__": # compile the main class/widgets to be displayed on screen.
 	root = mainApp()
@@ -90,20 +88,6 @@ for everyOption in walmartArrayForCategory:
 		pass
 	elif everyOption == '':
 		pass
-	elif everyOption == 'Long Description':
-		with open('generated.py', 'a+') as body:
-			body.write("""
-		label%s = tk.Label(width=25, height=5, anchor='w', relief='ridge', text="%s")
-		label%s.grid(row=%s, column=0, padx=5, pady=1)
-		entry%s = ScrolledText(self, width=58, height=5)
-		entry%s.grid(row=%s, column=1, padx=5, pady=1)
-""" % (number, everyOption, number, number, number, number, number))
-			body.close()
-
-		getInputArray.append('!SPECIALZ! entry%s.get(1.0, END))' % number)
-		with open('arrayLog.txt', 'w+') as arrayLogging:
-			arrayLogging.write(str(getInputArray))
-		number += 1
 	else:
 		getInputArray.append('entry%s.get()' % number)
 		with open('arrayLog.txt', 'w+') as arrayLogging:
@@ -111,17 +95,13 @@ for everyOption in walmartArrayForCategory:
 		createBody()
 		number += 1
 
-with open('generated.py', 'r') as replaceArray:
+with open('generatedGUI.py', 'r') as replaceArray:
 	with open('arrayLog.txt', 'r') as rawArray:
 			reading = replaceArray.read()
 			readRawArray = rawArray.read()
-
-			specialStringSub = """re.sub(\'[^A-Za-z0-9<>/]+\', \'\',"""
-
 			replacement = reading.replace('%REPLACEMEARRAY%', readRawArray.replace("'", ""))
-			replacement = replacement.replace('!SPECIALZ!', specialStringSub)
 
-with open('generated.py', 'w+') as newfile:
+with open('generatedGUI.py', 'w+') as newfile:
 	newfile.write(str(replacement))
 createEnder()
 

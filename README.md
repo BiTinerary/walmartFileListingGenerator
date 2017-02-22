@@ -7,11 +7,12 @@ The `guiGenerator.py` script uses metaprogramming to generate `generatedGUI.py` 
 with labels and entry options for each cell with content. ie: not empty, static variables like USD, Mesaurements, etc... Yes it's ugly. Yes it's metaprogramming. Yes, it gets the job done.<br>
 <br>
 Which looks like this: `generatedGUI.py`<br>
-<img src='https://s21.postimg.org/wgnjj6wp3/gitpic.png'><br>
+<img src='https://s13.postimg.org/j51qpujaf/github_Wally_Image.png'><br>
 <br>
 When you press <kbd>Enter</kbd> or the top button, it copies the following into your keyboard and writes to log file:<br>
 <br>
-`,kljh,klj,hljk,hlk,jh,lkjh,lkj,h,lkjh,lkj,h,lkj,hljk,h,,UPC,lkj,,,,,USD,hl,,,,,,,,INCHES,jkh,INCHES,lkj,INCHES,hl,POUNDS,jk,2038346,,,,,,,,,,,,,,,,,,,hlk,,,,jh,,,,,,,,,lkj,,,,USD,hlkj,USD,h,,kljh,LB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lkj,,,,,,,,,,,,,,,,,,,,h89769879876,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`<br>
+`,,Long desc no special characters Only HTML <br>Then some stuff,,,,,,,,,,,,,,UPC,,,,,,USD,,,,,,,,,INCHES,,INCHES,,INCHES,,POUNDS,,2038346,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,USD,,USD,,,,LB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+`<br>
 <br>
 You would then paste this into a spreadsheet (with 'special paste' option where applicable) and in turn have one more listing.
 
@@ -33,7 +34,9 @@ Given the fact that reading `xlsx` spreadsheets and then editing them on the fly
 *<strike>Extensible to more than just the home decor listing category. At the moment this category is all that applies to me personally.</strike><br>
 *<strike>Add tkinter GUI</strike><br>
 *<strike>Make final/output string a log file. <b>It is overwritten</b> every time a new listing is filled out, or when <kbd>Enter</kbd> is pressed.</strike>
-* Sanitize input, comma's are currently an issue. Obviously mess up list format. (urls? not an issue as of yet.)
+* <strike>Sanitize input</strike>, comma's are currently an issue. Obviously messes up list format. <strike>(urls? not an issue as of yet.)</strike>
+	* Input sanitized [using regex] to allow, but <b>remove</b> special characters from text <b>box</b>, with exception of `html` characters. Other regular input's still needs sanitization.
+	* URL's are properly encoded so that copying to clipboard isn't an issue.
 * Sanitize number inputs, UPC, MSRP, $$, etc...
 * Add 'upload file' option.
     * Instead of manual input per listing, accept input file (2d array) of copy/pasted log file that are marginally different (ie: sizes color) but allow for easy editing of certain cells (html, `<li></li>`, Description) and copy/pasting those to another array.
